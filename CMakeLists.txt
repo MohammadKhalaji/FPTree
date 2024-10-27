@@ -18,6 +18,10 @@ else()
 endif()
 
 
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../oneTBB/out/gnu_9.4_cxx11_64_release)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../oneTBB/include)
+
+
 set(PMEM_BACKEND "PMEM" CACHE STRING "Persistent memory backend type")
 
 if(${PMEM_BACKEND} STREQUAL "PMEM")
@@ -71,4 +75,5 @@ endif ()
 
 add_library(fptree_pibench_wrapper SHARED fptree_wrapper.cpp
 						fptree.cpp)
+target_link_libraries(fptree_pibench_wrapper libtbb.so)
 
