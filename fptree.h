@@ -16,10 +16,10 @@
 #include <time.h>
 #include <string.h>
 #include <immintrin.h>
-#include <tbb/spin_mutex.h>
-#include <tbb/spin_rw_mutex.h>
-//#include "oneapi/tbb/spin_mutex.h"
-//#include "oneapi/tbb/spin_rw_mutex.h"
+// #include <tbb/spin_mutex.h>
+// #include <tbb/spin_rw_mutex.h>
+#include "oneapi/tbb/spin_mutex.h"
+#include "oneapi/tbb/spin_rw_mutex.h"
 #include <iostream>
 #include <string>
 #include <cstdint>
